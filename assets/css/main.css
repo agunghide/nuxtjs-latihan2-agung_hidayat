@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav-item {
+    @apply hover:bg-gray-100 bg-transparent rounded-sm px-6 py-3 cursor-pointer border-b-2 border-transparent transition ease-in;
+  }
+  .nav-item.active {
+    @apply border-green-600;
+  }
+  .main-content {
+    @apply bg-white shadow-md m-8 p-8 rounded-lg;
+  }
+}
+
+@font-face {
+  font-family: 'TG Siloka Sundanese';
+  src: local('TG Siloka Sundanese'),
+    url('../fonts/TG Siloka Sundanese.otf') format('otf');
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s;
+}
+
+.page-enter,
+.page-leave-to {
+  transform: scale(0);
+  opacity: 0;
+  /* scale: 0; */
+}
